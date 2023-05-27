@@ -3,6 +3,7 @@ import java.util.Locale
 pluginManagement {
     repositories {
         gradlePluginPortal()
+        maven("https://repo.spongepowered.org/repository/maven-public/")
         maven("https://repo.papermc.io/repository/maven-public/")
     }
 }
@@ -45,3 +46,4 @@ if (testPlugin.exists()) {
 } else {
     testPlugin.writeText("// Uncomment to enable the test plugin module\n//include(\":test-plugin\")\n")
 }
+include("paper-api-generator")
